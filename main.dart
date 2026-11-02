@@ -1,45 +1,27 @@
 import 'dart:io';
 void main(){
-  //the first point
-for(int i=1;i<=30;i++){
-  if(i==25){
-    break;
-  }
-  if(i%3==0){
-    continue;
-  }
-print(i);
-  
+welcomeMessege();
+print('Enter the first grade');
+double g1=double.parse(stdin.readLineSync()!);
+print('Enter the second grade');
+double g2=double.parse(stdin.readLineSync()!);
+print('Enter the third grade');
+double g3=double.parse(stdin.readLineSync()!);
+print('Student name');
+String name=stdin.readLineSync()!;
+print('name:$name       Averge:${calcAverge(g1,g2,g3)}');
+displayStudentResult(name,calcAverge(g1, g2, g3));
 }
-//the second point
-print("Enter a number");
-num A=int.parse(stdin.readLineSync()!);
-int m=1;
-while(m<=12){
-    if(m==10){
-      break;
-    }
-    if(m==5){
-      m++;continue;
-
-    }
-
-  print("$m*$A=${m*A}");
-  m++;
+void welcomeMessege(){
+print("welcome in our school");
 }
-//the third point 
-  int num1;
-do {
-  print("Enter a positive number");
-  num1=int.parse(stdin.readLineSync()!);
-  if(num1==0){
-    break;
-  }
-} while (num1<0);
-
-
-
-
-
-
+double calcAverge(double g1,double g2,double g3){
+return(g1+g2+g3)/3;
+}
+void displayStudentResult(String name,double Averge,[String?notes]){
+print('Students name:$name');
+print('Averege:$Averge');
+if(notes !=null){
+  print("notes:$notes");
+}
 }
