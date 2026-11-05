@@ -1,19 +1,8 @@
-void main() {
- car c1= car();
- c1.color="blue" ;
- print(c1.color);
- c1.TurnOff();
- 
-}
-class car{
-  int? Speed;
-  String? model;
-  String? color;
-  void TurnOn(){
-    print("car is ready");
+class person{
+  String? name;
+  String? job;
+  int? grade;
+  void Actions(){
+    print("Running");
   }
-  void TurnOff(){
-    print('car is dead');
-  }
-
 }
